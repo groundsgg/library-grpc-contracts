@@ -31,9 +31,6 @@ enum StatusEventType {
   STATUS_EVENT_TYPE_SNAPSHOT = 1;
   STATUS_EVENT_TYPE_MOTD_CHANGED = 2;
   STATUS_EVENT_TYPE_MAINTENANCE_CHANGED = 3;
-
-  // Optional for later: emit when proxy online/offline changes.
-  // STATUS_EVENT_TYPE_PROXY_STATUS_CHANGED = 4;
 }
 
 message StatusEvent {
