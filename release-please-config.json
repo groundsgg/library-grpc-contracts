@@ -1,17 +1,17 @@
 {
-  "release-type": "gradle",
+  "release-type": "go",
   "separate-pull-requests": true,
   "tag-separator": "@",
   "include-component-in-tag": true,
   "packages": {
     "player": {
-      "path": "player"
+      "package-name": "player"
     },
     "stats": {
-      "path": "stats"
+      "package-name": "stats"
     },
     "status": {
-      "path": "status"
+      "package-name": "status"
     }
   }
 }
