@@ -1,5 +1,5 @@
 {
-  "release-type": "java",
+  "release-type": "go",
   "separate-pull-requests": true,
   "tag-separator": "@",
   "include-component-in-tag": true,
