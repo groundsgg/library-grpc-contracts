@@ -335,6 +335,12 @@ message StartMatchRequest {
   // needs one should refuse the match rather than invent one; a server
   // that does not (a duel arena it builds itself) ignores the field.
   string map_address = 4;
+
+  // The matchmaker keeps the players in the queue, as PREPARING, until the
+  // server says the round is ready (POST /v1/match/matches/{id}/ready) —
+  // when the server answers with signals_ready. Unset (an older matchmaker):
+  // the players are sent the moment the server accepts.
+  bool wait_for_ready = 5;
 }
 
 message StartMatchReply {
@@ -345,4 +351,9 @@ message StartMatchReply {
 
   // Why not. Free-form, for operators.
   string reason = 2;
+
+  // The server prepares the round after accepting it and will report it
+  // ready (or failed) on its own. The matchmaker then routes the players
+  // only once it is. Unset (an older server): ready means accepted.
+  bool signals_ready = 3;
 }
